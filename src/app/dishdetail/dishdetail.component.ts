@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 const DISH = {
   name: 'Uthappizza',
@@ -42,10 +42,17 @@ const DISH = {
 };
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  selector: 'app-dishdetail',
+  templateUrl: './dishdetail.component.html',
+  styleUrls: ['./dishdetail.component.scss']
 })
-export class AppComponent {
-  title = 'app';
+export class DishdetailComponent implements OnInit {
+
+  dish = DISH;
+
+  constructor() { }
+
+  ngOnInit() {
+  }
+
 }
